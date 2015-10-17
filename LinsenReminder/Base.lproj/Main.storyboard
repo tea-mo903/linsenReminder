@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LinsenReminder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yPe-3F-Ru5"/>
+                        <viewControllerLayoutGuide type="bottom" id="ppb-jh-IR2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Intervall:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYN-wM-XbM" userLabel="Intervall">
+                                <rect key="frame" x="20" y="99" width="65" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ll-28-uqx">
+                                <rect key="frame" x="106" y="48" width="194" height="124"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="s3t-QC-kJf"/>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="xF0-Nr-n94"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Beginn:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKT-ha-oBH" userLabel="Beginn">
+                                <rect key="frame" x="20" y="197" width="65" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nächste Erinnerung:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mh-2s-glk" userLabel="Next">
+                                <rect key="frame" x="20" y="480" width="121" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkg-AZ-crZ" userLabel="Next_Data">
+                                <rect key="frame" x="158" y="480" width="142" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbd-xC-Zg1" userLabel="setIntervall">
+                                <rect key="frame" x="142" y="193" width="108" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Set"/>
+                                <connections>
+                                    <action selector="btnSetIntervall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xjT-mM-2tQ"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="VTh-5H-rP7">
+                                <rect key="frame" x="20" y="231" width="280" height="216"/>
+                                <animations/>
+                                <date key="date" timeIntervalSinceReferenceDate="465150596.06330597">
+                                    <!--2015-09-28 16:29:56 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="de"/>
+                            </datePicker>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="beginnPicker" destination="VTh-5H-rP7" id="ihC-uC-ymG"/>
+                        <outlet property="intervallLabel" destination="CYN-wM-XbM" id="eQt-WY-7T0"/>
+                        <outlet property="intervallPicker" destination="2ll-28-uqx" id="y4e-4x-9M0"/>
+                        <outlet property="nextData" destination="Qkg-AZ-crZ" id="Vbk-oF-8cK"/>
+                        <outlet property="nextLabel" destination="3Mh-2s-glk" id="P9G-YG-Wdk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="177" y="464"/>
+        </scene>
+    </scenes>
+</document>
